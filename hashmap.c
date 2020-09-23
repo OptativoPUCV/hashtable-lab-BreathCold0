@@ -14,8 +14,8 @@ struct Pair {
      void * value;
 };
 
-struct HashMap {
-    Pair ** buckets;
+struct HashMap { // HashMap* map = (HashMap*) malloc (sizeof(HashMap));
+    Pair ** buckets; // map->buckets = (Pair **) malloc (..)
     long size; //cantidad de datos/pairs en la tabla
     long capacity; //capacidad de la tabla
     long current; //indice del ultimo dato accedido
@@ -57,6 +57,14 @@ void enlarge(HashMap * map) {
 
 
 HashMap * createMap(long capacity) {
+HashMap * map = (HashMap *)malloc(sizeof(HashMap));
+map->buckets = (Pair **) calloc (capacity,sizeof(Pair *));
+map->capacity = (long) malloc (sizeof(long));
+map->current = (long) malloc (sizeof(long));
+map->size = (long) malloc (sizeof(long));
+map->current = -1;
+map->capacity = capacity;
+
 
     return NULL;
 }
