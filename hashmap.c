@@ -73,11 +73,8 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 void * searchMap(HashMap * map,  char * key) {   
-unsigned long hash = 0;
-    char * ptr;
-    for (ptr = key; *ptr != '\0'; ptr++) {
-        hash += hash*32 + tolower(*ptr);
-    }
+
+
     return NULL;
 }
 
