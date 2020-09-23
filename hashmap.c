@@ -80,7 +80,7 @@ void * searchMap(HashMap * map,  char * key) {
 
 void * firstMap(HashMap * map) {
 
-    return NULL;
+    return map->buckets[0];
 }
 
 void * nextMap(HashMap * map) {
