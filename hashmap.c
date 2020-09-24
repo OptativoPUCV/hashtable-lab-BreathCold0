@@ -75,6 +75,7 @@ map->capacity = capacity;
 void eraseMap(HashMap * map,  char * key) {    
 long x = hash(key, map->capacity);
 map->buckets[x]->key = NULL;
+map->size -= 1;
 }
 
 void * searchMap(HashMap * map,  char * key) {   
