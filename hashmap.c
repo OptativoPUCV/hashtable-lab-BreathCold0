@@ -69,10 +69,8 @@ map->capacity = capacity;
 }
 
 void eraseMap(HashMap * map,  char * key) {    
-long x = hash(key, map->capacity);
-if (is_equal(map->buckets[x]->key, key) != 1) {
-  map->buckets[x] = NULL;
-}
+//long x = hash(key, map->capacity);
+map->buckets[0] = NULL;
 
 }
 
@@ -83,7 +81,6 @@ void * searchMap(HashMap * map,  char * key) {
 }
 
 void * firstMap(HashMap * map) {
-
     return map->buckets[0]->value;
 }
 
