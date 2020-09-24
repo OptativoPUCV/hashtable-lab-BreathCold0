@@ -51,7 +51,6 @@ if (map->buckets[x] != NULL ) {
 }
 map->buckets[x] = createPair(key, value);
 map->size += 1;
-x++;
 }
 
 void enlarge(HashMap * map) {
@@ -85,7 +84,7 @@ void * searchMap(HashMap * map,  char * key) {
 
 void * firstMap(HashMap * map) {
 
-    return map->buckets[0];
+    return map->buckets[0]->value;
 }
 
 void * nextMap(HashMap * map) {
