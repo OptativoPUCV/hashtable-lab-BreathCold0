@@ -52,7 +52,6 @@ return;
 }
 else {
   x++;
-  return;
 }
 map->buckets[x] = createPair(key, value);
 map->size += 1;
