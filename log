@@ -201,3 +201,8 @@ Thu Sep 24 23:40:15 UTC 2020:
  tests:  4|5
 total_score: 20/70
 c72b44a
+Thu Sep 24 23:49:21 UTC 2020: 
+ hashmap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+ tests:  0|0
+dda4e82
