@@ -51,7 +51,7 @@ if (map->buckets[x] != NULL ) {
 }
 map->buckets[x] = createPair(key, value);
 map->size += 1;
-
+x++;
 }
 
 void enlarge(HashMap * map) {
