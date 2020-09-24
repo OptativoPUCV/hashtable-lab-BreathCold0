@@ -46,7 +46,7 @@ int is_equal(void* key1, void* key2){
 
 void insertMap(HashMap * map, char * key, void * value) {
 long x = hash(key, map->capacity);
-if (map->buckets[x] != NULL && is_equal(map->buckets[x]->key, key) == 1) {
+if (map->buckets[x] != NULL ) {
   return;
 }
 map->buckets[x] = createPair(key, value);
@@ -70,6 +70,7 @@ map->capacity = capacity;
 }
 
 void eraseMap(HashMap * map,  char * key) {    
+//long x = hash(key, map->capacity);
 
 
 }
