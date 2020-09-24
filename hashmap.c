@@ -50,6 +50,10 @@ if (map->buckets[x] != NULL && map->buckets[x]->key == NULL) {
 
 return;
 }
+else {
+  x++;
+  return;
+}
 map->buckets[x] = createPair(key, value);
 map->size += 1;
 
