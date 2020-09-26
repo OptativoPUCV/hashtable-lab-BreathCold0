@@ -103,6 +103,6 @@ void * firstMap(HashMap * map) {
 }
 
 void * nextMap(HashMap * map) {
-map->current++;
+//map->current++;
     return NULL;
 }
