@@ -91,16 +91,15 @@ if (is_equal(key, map->buckets[x]->key) != 1) {
       if (x >= map->capacity) {
         x = 0;
       }
-    }while (is_equal(key, map->buckets[x]->key) != 1);
+    }while (map->buckets != NULL && is_equal(key, map->buckets[x]->key) != 1);
   }
 return map->buckets[x]->value;
 }
 
 void * firstMap(HashMap * map) {
-  if (map->current != 0) {
-map->current++;
-  }
-    return map->buckets[map->current]->value;
+
+
+    return map->buckets[0]->value;
 }
 
 void * nextMap(HashMap * map) {
