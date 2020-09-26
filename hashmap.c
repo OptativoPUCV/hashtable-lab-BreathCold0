@@ -84,7 +84,7 @@ map->size -= 1;
 void * searchMap(HashMap * map,  char * key) {   
 long x = hash(key, map->capacity);
 map->current = x;
-if (is_equal(map->buckets[x]->key, key)) {
+if (is_equal(map->buckets[x]->key, key) != 0) {
   do {
       x++;
       }while (map->buckets !=NULL && is_equal(map->buckets[x]->key, key));
