@@ -95,6 +95,9 @@ map->current = x;
 if (is_equal(map->buckets[x]->key, key) != 1) {
   do {
       x++;
+      if (x >= map->capacity) {
+        x = 0;
+      }
       }while (map->buckets !=NULL && is_equal(map->buckets[x]->key, key));
     }
 return map->buckets[x]->value;
