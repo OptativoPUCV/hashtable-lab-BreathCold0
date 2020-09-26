@@ -91,8 +91,8 @@ if (is_equal(map->buckets[x]->key, key) == 0) {
       if (x >= map->capacity) {
         x = 0;
       }
-      }while (map->buckets !=NULL && is_equal(map->buckets[x]->key, key));
-    }
+    }while (map->buckets[x] !=NULL && is_equal(map->buckets[x]->key, key));
+  }
 return map->buckets[x]->value;
 }
 

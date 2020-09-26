@@ -359,3 +359,9 @@ Sat Sep 26 22:15:36 UTC 2020:
  tests:  8|4
 total_score: 30/70
 fbb4814
+Sat Sep 26 22:19:15 UTC 2020: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  8|4
+total_score: 30/70
+b8a7165
