@@ -81,7 +81,7 @@ map->size -= 1;
 
 void * searchMap(HashMap * map,  char * key) {   
 long x = hash(key, map->capacity);
-
+map->current = x;
     return map->buckets[x]->value;
 }
 
