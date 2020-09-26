@@ -88,7 +88,7 @@ map->current = x;
 if (is_equal(key, map->buckets[x]->key) != 1) {
   do {
       x++;
-      if (x >= map->capacity) {
+      if (x > map->capacity) {
         x = 0;
       }
     }while (map->buckets != NULL && is_equal(key, map->buckets[x]->key) != 1);
