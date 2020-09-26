@@ -49,7 +49,9 @@ long x = hash(key, map->capacity);
 if (map->buckets[x] != NULL){
   do {
   x++;
-//  if (map->buckets[])
+if (x > map->capacity) {
+  x = 0;
+}
 }while (map->buckets[x] != NULL);
 }
 
