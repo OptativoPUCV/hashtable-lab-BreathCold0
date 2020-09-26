@@ -82,12 +82,13 @@ map->size -= 1;
 void * searchMap(HashMap * map,  char * key) {   
 long x = hash(key, map->capacity);
 map->current = x;
-//if (map->buckets[x]->key != key){
+if (map->buckets[x]->key != key){
   do {
   x++;
 }while (map->buckets !=NULL && map->buckets[x]->key != key);
-    return map->buckets[x]->value;
 }
+return map->buckets[x]->value;
+} //<-- ese creo que faltaba
 
 void * firstMap(HashMap * map) {
 
