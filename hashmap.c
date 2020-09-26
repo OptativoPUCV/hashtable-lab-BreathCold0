@@ -85,6 +85,7 @@ long x = hash(key, map->capacity);
 }
 
 void * firstMap(HashMap * map) {
+//  map->
     return map->buckets[0]->value;
 }
 
