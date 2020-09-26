@@ -49,6 +49,7 @@ long x = hash(key, map->capacity);
 if (map->buckets[x] != NULL){
   do {
   x++;
+//  if (map->buckets[])
 }while (map->buckets[x] != NULL);
 }
 
@@ -85,7 +86,7 @@ long x = hash(key, map->capacity);
 }
 
 void * firstMap(HashMap * map) {
-//  map->
+
     return map->buckets[0]->value;
 }
 
