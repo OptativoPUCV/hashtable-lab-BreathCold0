@@ -97,11 +97,11 @@ return map->buckets[x]->value;
 }
 
 void * firstMap(HashMap * map) {
-//int i
-    return map->buckets[0]->value;
+map->current++;
+    return map->buckets[map->current]->value;
 }
 
 void * nextMap(HashMap * map) {
-
+map->current++;
     return NULL;
 }
