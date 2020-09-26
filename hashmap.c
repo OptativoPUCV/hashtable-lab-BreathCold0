@@ -77,7 +77,7 @@ map->capacity = capacity;
 
 void eraseMap(HashMap * map,  char * key) {    
 long x = hash(key, map->capacity);
-if (map->buckets[x]->key != key){
+if (is_equal(map->buckets[x]->key, key)){
   do {
   x++;
   if (x >= map->capacity) {
