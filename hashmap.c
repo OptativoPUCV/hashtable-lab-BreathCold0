@@ -83,7 +83,7 @@ if (map->buckets[x]->key != key){
   if (x >= map->capacity) {
     x = 0;
   }
-}while (map->buckets[x] != NULL && map->buckets[x]->key != key);
+}while (map->buckets[x] != NULL && is_equal(map->buckets[x]->key, key));
 }
 map->buckets[x]->key = NULL;
 map->size -= 1;
