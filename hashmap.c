@@ -85,19 +85,19 @@ map->size -= 1;
 void * searchMap(HashMap * map,  char * key) {   
 long x = hash(key, map->capacity);
 map->current = x;
-if (map->buckets[x]->key != key) {
+if (is_equal(key, map->buckets[x]->key) == 1) {
   do {
       x++;
       if (x >= map->capacity) {
         x = 0;
       }
-    }while (map->buckets[x] !=NULL && map->buckets[x]->key != key);
+    }while (map->buckets[x] !=NULL && is_equal(key, map->buckets[x]->key) == 1);
   }
 return map->buckets[x]->value;
 }
 
 void * firstMap(HashMap * map) {
-
+//int i
     return map->buckets[0]->value;
 }
 
