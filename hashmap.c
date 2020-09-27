@@ -122,5 +122,5 @@ void * firstMap(HashMap * map) {
 
 void * nextMap(HashMap * map) {
 
-    return map->buckets[map->current++];
+    return map->buckets[1];
 }
