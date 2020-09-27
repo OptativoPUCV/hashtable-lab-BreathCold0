@@ -114,15 +114,19 @@ if (is_equal(key, map->buckets[x]->key) != 1) {
 }
 
 void * firstMap(HashMap * map) {
-
+if (map->buckets[map->current] == NULL) {
+    do {
+      map->current++;
+    }while (map->buckets[map->current] ==  NULL);
+}
     return map->buckets[map->current]->value;
 }
 
 void * nextMap(HashMap * map) {
-  if (map->buckets[map->current++] != NULL) {
+  if (map->buckets[map->current++] == NULL) {
     do {
       map->current++;
-    }while (map->buckets[map->current++] !=  NULL);
+    }while (map->buckets[map->current++] ==  NULL);
 }
 return map->buckets[map->current++]->key;
 }

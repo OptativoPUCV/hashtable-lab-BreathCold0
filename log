@@ -649,3 +649,9 @@ Sun Sep 27 19:52:29 UTC 2020:
  tests:  12|2
 total_score: 50/70
 4ac2cad
+Sun Sep 27 19:55:03 UTC 2020: 
+ hashmap.c | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+ tests:  12|2
+total_score: 50/70
+0287d73
