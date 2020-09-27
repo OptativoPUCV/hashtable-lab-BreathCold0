@@ -116,11 +116,12 @@ void * firstMap(HashMap * map) {
 if (map->buckets[map->current] == NULL) {
     do {
       map->current += 1;
-    }while (map->buckets[map->current] ==  NULL);
-}
-if (map->current == map->capacity) {
+      if (map->current == map->capacity) {
   return NULL;
 }
+    }while (map->buckets[map->current] ==  NULL);
+}
+
     return map->buckets[map->current]->value;
 }
 
@@ -129,10 +130,11 @@ void * nextMap(HashMap * map) {
   if (map->buckets[map->current] == NULL) {
     do {
       map->current += 1;
-    }while (map->buckets[map->current] ==  NULL);
-}
-if (map->current == map->capacity) {
+      if (map->current == map->capacity) {
   return NULL;
 }
+    }while (map->buckets[map->current] ==  NULL);
+}
+
 return map->buckets[map->current]->value;
 }
