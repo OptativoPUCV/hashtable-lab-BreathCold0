@@ -132,8 +132,9 @@ void * nextMap(HashMap * map) {
       aux += 1;
     }while (map->buckets[aux] ==  NULL);
 }
+map->current = aux;
 if (aux == map->capacity) {
   return NULL;
 }
-return map->buckets[aux]->key;
+return map->buckets[map->current]->key;
 }
