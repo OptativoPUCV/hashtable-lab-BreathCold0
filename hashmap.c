@@ -114,8 +114,8 @@ if (is_equal(key, map->buckets[x]->key) != 1) {
 }
 
 void * firstMap(HashMap * map) {
-    return map->buckets[map->current]->value;
 
+    return map->buckets[map->current]->value;
 }
 
 void * nextMap(HashMap * map) {
