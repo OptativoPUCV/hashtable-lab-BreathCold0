@@ -124,5 +124,10 @@ else {
 }
 
 void * nextMap(HashMap * map) {
-    return map->buckets[map->current++]->key;
+  if (map->buckets[map->current++] != NULL) {
+    do {
+      map->current++;
+    }while (map->buckets[map->current++] !=  NULL);
+}
+return map->buckets[map->current++]->key;
 }
