@@ -113,6 +113,17 @@ if (is_equal(key, map->buckets[x]->key) != 1) {
 }
 
 void * firstMap(HashMap * map) {
+  int aux = map->current;
+  if (map->buckets[aux] == NULL) {
+    do {
+      aux += 1;
+    }while (map->buckets[aux] ==  NULL);
+}
+map->current = aux;
+if (aux == map->capacity) {
+  return NULL;
+}
+return map->buckets[map->current]->value;
 /*if (map->buckets[map->current] == NULL) {
     do {
       map->current += 1;
