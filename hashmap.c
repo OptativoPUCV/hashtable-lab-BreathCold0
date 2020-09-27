@@ -126,13 +126,14 @@ if (map->current == map->capacity) {
 
 void * nextMap(HashMap * map) {
   map->current += 1;
-  if (map->buckets[map->current] == NULL) {
+  int aux = map->current;
+  if (map->buckets[aux] == NULL) {
     do {
-      map->current += 1;
-    }while (map->buckets[map->current] ==  NULL);
+      aux += 1;
+    }while (map->buckets[aux] ==  NULL);
 }
-if (map->current == map->capacity) {
+if (aux == map->capacity) {
   return NULL;
 }
-return map->buckets[map->current]->key;
+return map->buckets[aux]->key;
 }
