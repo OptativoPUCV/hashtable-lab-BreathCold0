@@ -113,6 +113,7 @@ if (is_equal(key, map->buckets[x]->key) != 1) {
 }
 
 void * firstMap(HashMap * map) {
+  map->current = 0;
 if (map->buckets[map->current] == NULL) {
     do {
       map->current += 1;
