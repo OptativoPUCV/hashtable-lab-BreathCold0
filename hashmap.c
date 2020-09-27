@@ -112,12 +112,14 @@ if (is_equal(key, map->buckets[x]->key) != 1) {
 }
 
 void * firstMap(HashMap * map) {
+if (map->current > 0) {
+  map->current++;
+}
 
-
-    return map->buckets[0]->value;
+    return map->buckets[map->current]->value;
 }
 
 void * nextMap(HashMap * map) {
-//map->current++;
+map->current++;
     return NULL;
 }
