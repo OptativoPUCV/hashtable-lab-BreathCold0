@@ -117,6 +117,9 @@ void * firstMap(HashMap * map) {
 if (map->current <= 0) {
   map->current = 0;
 }
+else {
+  map->current += 1;
+}
     return map->buckets[map->current]->value;
 }
 
