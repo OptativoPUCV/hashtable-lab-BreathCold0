@@ -119,6 +119,9 @@ if (map->buckets[map->current] == NULL) {
       map->current++;
     }while (map->buckets[map->current] ==  NULL);
 }
+if (map->current == map->capacity) {
+  return NULL;
+}
     return map->buckets[map->current]->value;
 }
 
