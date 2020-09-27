@@ -643,3 +643,9 @@ Sun Sep 27 19:52:22 UTC 2020:
  tests:  12|2
 total_score: 50/70
 ea899b4
+Sun Sep 27 19:52:29 UTC 2020: 
+ hashmap.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+ tests:  12|2
+total_score: 50/70
+4ac2cad
