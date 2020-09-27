@@ -126,7 +126,7 @@ if (map->buckets[map->current] == NULL) {
 }
 
 void * nextMap(HashMap * map) {
-  map->current += 1;
+//  map->current += 1;
   if (map->buckets[map->current] == NULL) {
     do {
       map->current += 1;
