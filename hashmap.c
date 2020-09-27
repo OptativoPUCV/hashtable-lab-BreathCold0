@@ -112,6 +112,9 @@ if (is_equal(key, map->buckets[x]->key) != 1) {
 }
 
 void * firstMap(HashMap * map) {
+  if (map->current == -1) {
+  map->current++;
+  }
     return map->buckets[map->current]->value;
 }
 
