@@ -121,5 +121,5 @@ if (map->current <= 0) {
 }
 
 void * nextMap(HashMap * map) {
-    return map->buckets[map->current++]->value;
+    return map->buckets[map->current++]->key;
 }
