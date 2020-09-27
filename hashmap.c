@@ -120,7 +120,7 @@ if (map->buckets[map->current] == NULL) {
       if (map->current == map->capacity) {
   return NULL;
 }
-    }while (map->buckets[map->current] ==  NULL);
+    }while (map->buckets[map->current] ==  NULL && map->buckets[map->current]->key == NULL);
 }
 
     return map->buckets[map->current]->value;
@@ -134,7 +134,7 @@ map->current = 0;
       if (map->current == map->capacity) {
   return NULL;
 }
-    }while (map->buckets[map->current] ==  NULL);
+    }while (map->buckets[map->current] ==  NULL && map->buckets[map->current]->key == NULL);
 }
 
 return map->buckets[map->current]->value;
