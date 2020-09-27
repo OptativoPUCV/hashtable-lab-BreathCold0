@@ -85,8 +85,10 @@ if (is_equal(key, map->buckets[x]->key) != 1) {
       }
     }while (map->buckets[x] != NULL && is_equal(key, map->buckets[x]->key) != 1);
   }
+  if (map->buckets[x] != NULL) {
 map->buckets[x]->key = NULL;
 map->size -= 1;
+  }
 }
 
 void * searchMap(HashMap * map,  char * key) {   
