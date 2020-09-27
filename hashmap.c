@@ -93,7 +93,13 @@ if (is_equal(key, map->buckets[x]->key) != 1) {
       }
     }while (map->buckets[x] != NULL && is_equal(key, map->buckets[x]->key) != 1);
   }
-return map->buckets[x]->value;
+  if (map->buckets[x]->value == NULL) {
+    return NULL;
+  }
+  else {
+    return map->buckets[x]->value;
+  }
+
 }
 
 void * firstMap(HashMap * map) {
