@@ -116,7 +116,7 @@ if (is_equal(key, map->buckets[x]->key) != 1) {
 void * firstMap(HashMap * map) {
 if (map->buckets[map->current] == NULL) {
     do {
-      map->current++;
+      ++map->current;
     }while (map->buckets[map->current] ==  NULL);
 }
 if (map->current == map->capacity) {
@@ -126,13 +126,13 @@ if (map->current == map->capacity) {
 }
 
 void * nextMap(HashMap * map) {
-  if (map->buckets[map->current++] == NULL) {
+  if (map->buckets[++map->current] == NULL) {
     do {
-      map->current++;
-    }while (map->buckets[map->current++] ==  NULL);
+      ++map->current;
+    }while (map->buckets[++map->current] ==  NULL);
 }
 if (map->current == map->capacity) {
   return NULL;
 }
-return map->buckets[map->current++]->key;
+return map->buckets[++map->current]->key;
 }
