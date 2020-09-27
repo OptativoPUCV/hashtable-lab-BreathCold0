@@ -93,7 +93,7 @@ if (is_equal(key, map->buckets[x]->key) != 1) {
       }
     }while (map->buckets[x] != NULL && is_equal(key, map->buckets[x]->key) != 1);
   }
-  if (map->buckets[x]->value == NULL) {
+  if (map->buckets[x] == NULL) {
     return NULL;
   }
   else {
